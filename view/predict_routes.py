@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from controller.diabetes_controller import DiabetesController
 
 predict_routes = Blueprint('predict_routes', __name__)
-diabetes_controller = DiabetesController(data_path=r"C:\Users\migue\OneDrive\Documentos\diabetesApi\diabetes_prediction_dataset.csv")
+diabetes_controller = DiabetesController(data_path="https://raw.githubusercontent.com/mleal2004/ApiDiabetesPredict/refs/heads/main/diabetes_prediction_dataset.csv")
 
 @predict_routes.route('/predict', methods=['POST'])
 def predict():
